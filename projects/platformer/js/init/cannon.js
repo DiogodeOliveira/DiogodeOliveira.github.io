@@ -20,31 +20,13 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        cannon.create.onTop(120, 0);
-        cannon.create.onTop(150, 500);
-        cannon.create.onTop(180, 1000);
-        cannon.create.onTop(210, 1500);
-        cannon.create.onTop(240, 2000);
-        cannon.create.onTop(270, 2500);
-        cannon.create.onTop(300, 3000);
-        cannon.create.onTop(330, 3500);
-        cannon.create.onTop(360, 4000);
-        cannon.create.onTop(390, 4500);
-        cannon.create.onTop(420, 5000);
-        cannon.create.onTop(450, 5500);
-        cannon.create.onTop(480, 6000);
-        cannon.create.onTop(510, 6500);
-        cannon.create.onTop(540, 7000);
-        cannon.create.onTop(570, 7500);
-        cannon.create.onTop(600, 8000);
-        cannon.create.onTop(630, 8500);
-        cannon.create.onTop(660, 9000);
-        cannon.create.onTop(690, 9500);
-        cannon.create.onTop(720, 10000);
-        cannon.create.onTop(750, 10500);
-        cannon.create.onTop(780, 11000);
-       
-        
+        cannon.create.onTop(240);
+        cannon.create.onTop(280);
+        cannon.create.onTop(320);
+        cannon.create.onTop(580);
+        cannon.create.onTop(620);
+        cannon.create.onTop(660);
+        cannon.create.onLeft(650);
         // ALL YOUR CODE GOESABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     };
