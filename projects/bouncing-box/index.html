@@ -13,7 +13,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: green;
+			background-color:red;
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -44,6 +44,9 @@
 			var points;
 			var speed;
 			var direction;
+			var positionY;
+			var directionY;
+			var boardHeight = jQuery(window).height();
 			
 			position = 0;
 			points = 0;
@@ -51,6 +54,7 @@
 			direction = 1;
 			
 			box.css('left', position);
+			box.css('top', positionY);
 			box.text(points);
 			function update() {
 				// TODO 3 / 6 / 7 / 8
@@ -69,7 +73,17 @@
 					console.log("Left Wall Hit");
 					direction = 1;
 					console.log(direction);
-				}    
+				}
+				if(positionY > boardHeight) {
+					console.log("Top Wall Hit");
+					directionY = -1;
+					console.log(directionY);
+				}
+				if(positionY < 0) {
+					console.log("Bottom Wall Hit");
+					directionY = 1;
+					console.log(directionY)
+				}
 			
 			};
 
@@ -77,13 +91,31 @@
 			
 			function handleBoxClick() {
 				// TODO 4 / 5
-				points += 1;
-				box.text(points);
-				position = 0;
-				speed += 3;
+				changeSpeed(3);
+			    randomlyPositionBox();
+				increasePoints();
+				if(points % 5 === 0) {
+					changeSpeed(-5);
+					
+				}
 			};
-
-
+            
+            function increasePoints() {
+            	points += 1;
+				box.text(points);
+				
+            }
+            
+            function changeSpeed(speedChange) {
+            	speed += speedChange;
+            }
+            
+            function randomlyPositionBox() {
+            	var randNum = Math.random() * boardWidth;
+				console.log(randNum);
+				position = randNum;
+            }
+			
 			//this executes the update function code every 50 milliseconds
 			setInterval(update, 50);
 			// this executes the handleBoxClick function code every time the box is clicked on
