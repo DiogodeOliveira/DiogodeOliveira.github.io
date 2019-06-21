@@ -71,20 +71,15 @@ for (counter; counter < 100; counter++) {
     
         function update() {
             // TODO 4 : Update the circle's position //
-        for (var i = 0; i < circles.length; i++) {
-            physikz.updatePosition(circles[i]);
-        }
-        
             
             // TODO 5 : Call game.checkCirclePosition on your circles.
-        for (var i = 0; i < circles.length; i++) {
-            game.checkCirclePosition(circles[i]);   
-        }
+            
             // TODO 8 : Iterate over the array
-        var circles = [];
         
         for (var i = 0; i < circles.length; i++) {
             var eachValue = circles[i];
+            game.checkCirclePosition(circles[i]);   
+            physikz.updatePosition(circles[i]);
         }
 
         }
