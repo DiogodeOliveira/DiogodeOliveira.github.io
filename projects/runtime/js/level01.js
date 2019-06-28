@@ -1,10 +1,9 @@
 var level01 = function (window) {
 
     window.opspark = window.opspark || {};
-
+    
     var draw = window.opspark.draw;
     var createjs = window.createjs;
-
     window.opspark.runLevelInGame = function(game) {
         // some useful constants 
         var groundY = game.groundY;
@@ -60,6 +59,7 @@ var level01 = function (window) {
             else if (type === 'reward') {
                 createReward(x, y);
             }
+            
         }
         function createEnemy (x,y) {
             var enemy =  game.createGameItem('enemy',25);
